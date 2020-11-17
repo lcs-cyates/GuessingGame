@@ -8,9 +8,27 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        Text("Hello, world!")
-            .padding()
+   // The guess made by the user
+    @State private var theUserGuess = ""
+    var body: some View{
+        NavigationView{
+            
+        }
+        VStack{
+            
+            Text("Guessing Game")
+            
+            Text("I'm thinking of a number between 1 and 100. Guess what it is!")
+            
+            TextField("Enter your guess here", text: $theUserGuess)
+            
+            Button ("Submit Guess"){
+                //check the guess
+            }
+            
+            Text("You guessed\(theUserGuess)")
+        }
+        .navigationTitle("Guessing Game")
     }
 }
 
